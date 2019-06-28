@@ -27,7 +27,7 @@ app.post('/colors/:colorName', function (req, res) {
     res.send("Droid color set to " + req.params["colorName"] + '.');
 })
 
-app.get('/', function (req, res) {
+app.post('/', function (req, res) {
         Singleton.getInstance();
         // roll BB-8 in a random direction, changing direction every second
         setInterval(function () {
