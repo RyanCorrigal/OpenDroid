@@ -4,7 +4,8 @@
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 # install node and dependencies
-sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt-get install -y build-essential
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -32,7 +33,7 @@ sudo npm install -g nodemon
 # test our nodejs BLE setup
 sudo nodemon node_modules/noble/examples/advertisement-discovery.js
 
-echo 'Node has been successfully iinstalled with the following modules:'
+echo 'Node has been successfully installed with the following modules:'
 echo '  - Nodemon (Global)'
 echo '  - Noble'
 echo '  - Shpero'
