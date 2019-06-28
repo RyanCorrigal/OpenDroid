@@ -11,7 +11,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update -y && sudo apt-get install -y yarn
 
 # install noble dependencies
-sudo apt-get install -y bluetooth bluez libbluetooth-dev libudev-dev
+sudo apt-get install -y bluetooth bluez libbluetooth-dev libudev-dev libcap2-bin
 
 # install npm packages
 mkdir node/
